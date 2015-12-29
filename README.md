@@ -11,9 +11,10 @@
 	- [Release](https://github.com/doc-solutions/documentation-gitflow/blob/master/source/release.md)
 	- [Hotfix](https://github.com/doc-solutions/documentation-gitflow/blob/master/source/hotfix.md)
 
-![Fluxo](https://github.com/doc-solutions/documentation-gitflow/blob/master/source/images/flow.jpg)
+## Ilustração
 
-![Branches](https://github.com/doc-solutions/documentation-gitflow/blob/master/source/images/branches.jpg)
+- [Fluxo completo](https://github.com/doc-solutions/documentation-gitflow/blob/master/source/images/flow.jpg)
+- [Nomeação do ramos auxiliares](https://github.com/doc-solutions/documentation-gitflow/blob/master/source/images/branches.jpg)
 
 ## Log
 
