@@ -1,4 +1,4 @@
-# Branches principais
+# Ramos principais
 
 - master
 - dev
