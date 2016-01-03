@@ -28,7 +28,7 @@ $ git push origin dev
 
 A flag `--no-ff` faz com que a impressão em série para criar sempre um novo objeto commit, mesmo que a fusão poderia ser realizada com um `fast-forward`. Isso evita a perda de informações sobre a existência histórica de um ramo de funcionalidade e reúne todos os commits que juntos adicionaram o recurso. Exemplo:
 
-![Flag --no-ff](images/merge-no-ff.jpg)
+![Flag --no-ff](https://github.com/doc-solutions/documentation-gitflow/blob/master/source/images/merge-no-ff.jpg)
 
 Neste último caso, é impossível ver a história Git qual dos objetos cometem juntos têm implementado um recurso de que você teria que ler manualmente todas as mensagens de log. Reverter uma característica totalmente (ou seja, um grupo de commit), é uma verdadeira dor de cabeça na última situação, enquanto ele é feito facilmente se o `--no-ff` foi usado.
 

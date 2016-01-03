@@ -4,9 +4,9 @@ Ao lado das branches principais `master` e `dev`, o modelo de desenvolvimento ut
 
 Os diferentes tipos de branches que podem utilizar são:
 
-- feature
-- release 
-- hotfix 
+- [feature](https://github.com/doc-solutions/documentation-gitflow/blob/master/source/feature.md)
+- [release](https://github.com/doc-solutions/documentation-gitflow/blob/master/source/release.md)
+- [hotfix](https://github.com/doc-solutions/documentation-gitflow/blob/master/source/hotfix.md)
 
 Cada um desses branches têm um propósito específico e estão vinculados a regras estritas quanto à qual as sucursais podem ser seu ramo de origem e que ramos devem ser os seus destinos de mesclagem.
 

@@ -1,7 +1,7 @@
 # Principais
 
-- master
-- dev
+- [master](https://github.com/doc-solutions/documentation-gitflow/blob/master/source/master.md)
+- [dev](https://github.com/doc-solutions/documentation-gitflow/blob/master/source/dev.md)
 
 O código do `HEAD` da branch principal `origin/master`, sempre representará o que está pronto para produção.
 

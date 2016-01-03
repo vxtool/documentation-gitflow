@@ -11,7 +11,7 @@ O momento chave para ramificar um novo branch `release` de `dev` é quando o amb
 É exatamente no início de um branch `release` que o lançamento é atribuído um número de versão. Até aquele momento, o branch `dev` refletiu mudanças para a "próxima versão", mas não está claro se essa "próxima versão" acabará por se tornar 0.3 ou 1.0, até o branch release é iniciado. Essa decisão é feita sobre o início do branch `release` e é realizado pelas regras do projeto no número da versão.
 
 
-### Criando um branch release
+## Criando um branch release
 
 Os branches `release` são criados a partir do branch `dev`. Por exemplo, digamos que a versão 1.1.5 é a versão de produção atual e nós temos um grande lançamento chegando. O estado de `dev` está pronto para a "próxima versão" e decidimos que isso vai se tornar a versão 1.2 (em vez de 1.1.6 ou 2.0). Portanto, se ramificar e dar o branch `release` um nome que reflete o novo número de versão:
 
@@ -29,7 +29,7 @@ Depois de criar um novo branch e mudar para ele, nós mudamos o número da vers�
 
 Este novo branch pode existir lá por um tempo, até que o `release` possa ser implementado definitivamente. Durante esse tempo, correções de bugs pode ser aplicada neste branch (em vez de ser no branch `dev`). Adicionando grandes novos recursos aqui é estritamente proibido. Eles devem ser mesclados em dev, e portanto, esperar pelo próximo grande lançamento.
 
-### Finalizar um branch release
+## Finalizar um branch release
 
 Quando o estado do branch `release` está pronto para se tornar um lançamento real, algumas ações precisam ser realizadas. Primeiro, o branch `release` é mesclado em `master` (uma vez que cada commit no `master` é um novo lançamento, por definição). Em seguida, que os commits no `master` devem ser marcados para futura referência fácil para essa versão histórica. Finalmente, as alterações feitas no branch `release` precisam ser mescladas de volta para `dev` de modo que as versões futuras também contêm estas correções de bugs.
 
