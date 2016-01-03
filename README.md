@@ -3,13 +3,15 @@
 [![licence mit](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/doc-solutions/documentation-gitflow/blob/master/LICENSE.md)
 [![issues](https://img.shields.io/github/issues/doc-solutions/documentation-gitflow.svg)](https://github.com/doc-solutions/documentation-gitflow/issues)
 
-## Sumário
+## Branches
 
-- [Principais](https://github.com/doc-solutions/documentation-gitflow/blob/master/source/main-branches.md)
-- [Auxiliares](https://github.com/doc-solutions/documentation-gitflow/blob/master/source/supporting-branches.md)
-	- [Feature](https://github.com/doc-solutions/documentation-gitflow/blob/master/source/feature.md)
-	- [Release](https://github.com/doc-solutions/documentation-gitflow/blob/master/source/release.md)
-	- [Hotfix](https://github.com/doc-solutions/documentation-gitflow/blob/master/source/hotfix.md)
+- [Principais](source/main.md)
+	- [Master](source/master.md)
+	- [Dev](source/dev.md)
+- [Auxiliares](source/supporting.md)
+	- [Feature](source/feature.md)
+	- [Release](source/release.md)
+	- [Hotfix](source/hotfix.md)
 
 ## Ilustração
 
