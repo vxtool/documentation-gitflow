@@ -1,3 +1,3 @@
 # Dev
 
-[< Voltar](https://github.com/doc-solutions/documentation-gitflow/blob/master/README.md)
+[&#65513; Voltar](https://github.com/doc-solutions/documentation-gitflow/blob/master/README.md)

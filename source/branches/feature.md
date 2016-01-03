@@ -34,4 +34,4 @@ Neste último caso, é impossível ver a história Git qual dos objetos cometem 
 
 Sim, ele vai criar um vazio no commit de objetos, mas o ganho é muito maior do que o custo. 
 
-[< Voltar](https://github.com/doc-solutions/documentation-gitflow/blob/master/README.md)
+[&#65513; Voltar](https://github.com/doc-solutions/documentation-gitflow/blob/master/README.md)

@@ -12,4 +12,4 @@ Cada um desses branches têm um propósito específico e estão vinculados a reg
 
 De maneira nenhuma esses branches são "especiais" de uma perspectiva técnica. Os tipos de filiais são classificados pela forma como os usamos. 
 
-[< Voltar](https://github.com/doc-solutions/documentation-gitflow/blob/master/README.md)
+[&#65513; Voltar](https://github.com/doc-solutions/documentation-gitflow/blob/master/README.md)

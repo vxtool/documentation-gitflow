@@ -10,4 +10,4 @@ Quando o código na branch `dev` chega a um ponto estável e está pronto para s
 
 Portanto, cada vez que as alterações são mescladas de volta para master, esta é uma nova versão de produção.
 
-[< Voltar](https://github.com/doc-solutions/documentation-gitflow/blob/master/README.md)
+[&#65513; Voltar](https://github.com/doc-solutions/documentation-gitflow/blob/master/README.md)
