@@ -1,8 +1,8 @@
 # Hotfix
 
-Será ramificado a partir de: `master`
-Deve ser mesclado de volta para: `dev` e `master` 
-Convenção de nomenclatura: hotfix-* 
+- Criação a partir de: `master`
+- Deve ser mesclada em: `dev` e `master`
+- Nomenclatura: `hotfix-*` 
 
 Os branches `hotfix` são muito parecidos com os branches `release`, eles também são destinados a preparar-se para uma nova versão de produção, embora não planejada. Eles surgem da necessidade de agir imediatamente após um estado indesejado de uma versão de produção ao vivo. Quando um `bug` crítico em uma versão de produção deve ser resolvido imediatamente, um branch de correção será ramificado a partir da tag correspondente no branch master que marca a versão de produção.
 

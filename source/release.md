@@ -1,8 +1,8 @@
-## Release 
+# Release 
 
-Será ramificado a partir de: `dev` 
-Deve ser mesclado de volta para: `dev` e `master` 
-Convenção de nomenclatura: release-* 
+- Criação a partir de: `dev` 
+- Deve ser mesclada em: `dev` e `master` 
+- Nomenclatura: `release-*`
 
 O branch `release` apoia a preparação de uma nova versão de produção. Eles permitem pequenas correções de bugs e preparar os meta-dados para um `release` (número da versão, construção de datas, etc.). Ao fazer todo esse trabalho em um branch `release`, o branch `dev` é liberado para receber recursos para o próximo grande lançamento.
 

@@ -1,6 +1,6 @@
-# Ramos auxiliares
+# Auxiliares
 
-Ao lado do branches principais master e dev, o nosso modelo de desenvolvimento utiliza uma variedade de branches de apoio para auxiliar o desenvolvimento paralelo entre os membros da equipe, facilidade de rastreamento de recursos, preparação para lançamentos de produção e para auxiliar na fixação rapidamente problemas de produção ao vivo. Ao contrário dos principais branches, estes branches sempre tem um tempo de vida limitado, uma vez que eles serão removidos eventualmente.
+Ao lado das branches principais `master` e `dev`, o modelo de desenvolvimento utiliza uma variedade de branches de apoio para auxiliar o desenvolvimento paralelo entre os membros da equipe, com facilidade de rastreamento de recursos, preparação para lançamentos de produção e para auxiliar na correção rápida de problemas de produção. Ao contrário dos principais branches, estes branches sempre tem um tempo de vida limitado, uma vez que eles serão removidos eventualmente.
 
 Os diferentes tipos de branches que podem utilizar são:
 

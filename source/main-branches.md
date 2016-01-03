@@ -1,14 +1,13 @@
-# Ramos principais
+# Principais
 
 - master
 - dev
 
-O código fonte do `HEAD` do branch principal `origin/master`, sempre representará que está pronto para produção.
+O código do `HEAD` da branch principal `origin/master`, sempre representará o que está pronto para produção.
 
-No branch `origin/dev`, o código fonte sempre reflete um estado com as alterações de desenvolvimento mais recente entregues para o próximo `release`. Alguns chamariam isso de "ramo de integração". Qualquer outro branch será criado a partir deste.
+Na branch `origin/dev`, o código sempre refletirá um estado com as alterações de desenvolvimento mais recente entregues para o próximo `release`. Alguns chamariam isso de "branch de integração". Todos os outras branches, serão criados a partir deste. 
+Quando o código na branch `dev` chega a um ponto estável e está pronto para ser lançado, todas as alterações devem ser mescladas de volta para `master`, marcado com um número de versão.
 
-Quando o código-fonte no branch dev chega a um ponto estável e está pronto para ser lançado, todas as alterações devem ser mescladas de volta para master de alguma forma e, em seguida, marcado com um número de versão.
-
-Portanto, cada vez que as alterações são mescladas de volta para master, esta é uma nova versão de produção por definição.
+Portanto, cada vez que as alterações são mescladas de volta para master, esta é uma nova versão de produção.
 
 [< Voltar](https://github.com/doc-solutions/documentation-gitflow/blob/master/README.md)
