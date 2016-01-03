@@ -5,11 +5,11 @@
 
 ## Introdução
 
-É muito importante para um projeto, ter o versionamento do seu código. Principalmente, quando se tem mais de um desenvolvedor na equipe. Crie um cenário, onde um projeto tem 10 desenvolvedores e uma linha de código que você desenvolveu, não está como a deixou. E agora, como saber quem mexeu, se não tem o código versionado? Única solução é parar os outros 9 desenvolvedores e saber o que houve. Nem é preciso dizer que esse processo afetará muito a produtividade da equipe. Portanto, não há desculpas, para não versionar o código. E podemos estar fazendo com o [GIT](https://git-scm.com/book/pt-br/v1/). 
+É muito importante para um projeto, ter o versionamento do seu código. Principalmente, quando se tem mais de um desenvolvedor na equipe. Crie um cenário, onde um projeto tem 10 desenvolvedores e uma linha de código que você desenvolveu, não está como a deixou. E agora, como saber quem mexeu, se não tem o código versionado? Única solução é parar os outros 9 desenvolvedores e saber o que houve. Nem é preciso dizer que esse processo afetará muito a produtividade da equipe. Portanto, não há desculpas, para não versionar o código. E podemos estar fazendo isso com o [GIT](https://git-scm.com/book/pt-br/v1/). 
 
 ## Fluxo de trabalho
 
-Apenas versionar o código, não evita todos os problemas que possam surgir durante o projeto. É necessário que se tenha um fluxo de trabalho e a equipe esteja alinhada. Abaixo na parte de [Ilustração](#ilustracao), podemos ver o `fluxo completo`. E logo abaixo, está descrita as funções das branches principais e auxiliares.
+Apenas versionar o código, não evita todos os problemas que possam surgir durante o projeto. É necessário que se tenha um fluxo de trabalho e a equipe esteja alinhada. Abaixo na parte de [Ilustração](#ilustração), podemos ver o `fluxo completo`. E logo abaixo, está descrita as funções das branches principais e auxiliares.
 
 ## Branches
 
