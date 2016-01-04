@@ -12,4 +12,4 @@ Cada um tem um propósito específico e estão vinculados a regras quanto a sua 
 
 Podem existir apenas localmente ou também remoto, dependendo da necessidade da equipe. 
 
-[&#65513; Voltar](https://github.com/doc-solutions/documentation-gitflow/blob/master/README.md)
+[&#65513; Readme](https://github.com/doc-solutions/documentation-gitflow/blob/master/README.md)

@@ -63,4 +63,5 @@ $ git branch -d release/1.2
 ```
 
 [&#65513; Auxiliares](https://github.com/doc-solutions/documentation-gitflow/blob/master/source/branches/supporting.md)
+
 [&#65513; Readme](https://github.com/doc-solutions/documentation-gitflow/blob/master/README.md)

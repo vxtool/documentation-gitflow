@@ -35,4 +35,5 @@ Sem a `flag` é impossível ver a história dos objetos, já que teria que ler m
 Sim, ele vai criar um vazio no commit de objetos, mas o ganho é muito maior do que o custo. 
 
 [&#65513; Auxiliares](https://github.com/doc-solutions/documentation-gitflow/blob/master/source/branches/supporting.md)
+
 [&#65513; Readme](https://github.com/doc-solutions/documentation-gitflow/blob/master/README.md)
