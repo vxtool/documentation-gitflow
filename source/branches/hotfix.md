@@ -2,70 +2,66 @@
 
 - Criação a partir de: `master`
 - Deve ser mesclada em: `dev` e `master`
-- Nomenclatura: `hotfix-*` 
+- Nomenclatura: `hotfix/*` 
 
-Os branches `hotfix` são muito parecidos com os branches `release`, eles também são destinados a preparar-se para uma nova versão de produção, embora não planejada. Eles surgem da necessidade de agir imediatamente após um estado indesejado de uma versão de produção ao vivo. Quando um `bug` crítico em uma versão de produção deve ser resolvido imediatamente, um branch de correção será ramificado a partir da tag correspondente no branch master que marca a versão de produção.
+A branch `hotfix` é muito parecida com a branch `release`, ela também é destinada para uma nova versão de produção, embora não planejada. Ela é criada da necessidade de agir imediatamente após um estado indesejado de uma versão de produção. Quando um `bug` crítico em uma versão de produção deve ser resolvido imediatamente, uma branch `hotfix` será criada a partir da tag correspondente na branch `master` que marca a versão atual de produção.
 
-A essência é que o trabalho dos membros da equipe (branch dev) possam continuar, enquanto outra pessoa está a preparar uma correção de produção rápida.
+É fundamental que o trabalho dos membros da equipe(branch dev) possa continuar, enquanto outra pessoa está preparando uma correção rápida para produção.
 
-## Criando o branch hotfix
+## Criando uma branch
 
-Os branches `hotfix` são criados a partir do branch `master`. Por exemplo, digamos que a versão 1.2 é a versão de produção atual em execução ao vivo e causando problemas devido a um erro grave. Mas as mudanças em `dev` ainda instável. Podemos, então, ramificar um branch `hotfix` e começar a corrigir o problema: 
+A branch `hotfix` é criada a partir da branch `master`. Digamos que a versão 1.2 é a versão atual de produção e está causando problemas devido a um erro grave. Mas há mudanças em `dev` ainda instável. Podemos, criar uma branch `hotfix` e começar a corrigir o problema: 
 
 ```
-$ git checkout -b hotfix-1.2.1 master
-// Mudou para um novo ramo "hotfix-1.2.1"
+$ git checkout -b hotfix/1.2.1 master
+// Criou uma nova branch "hotfix/1.2.1"
 $ ./bump-version.sh 1.2.1
 // Arquivos modificados com sucesso, versão 1.2.1.
-$ git commit -a -m "Trocado o número de versão para 1.2.1"
-// [hotfix-1.2.1 41e61bb] número da versão 1.2.1
-// 1 arquivos alterados, 1 inserções (+), 1 deleções (-)
+$ git commit -am "Alterando o número de versão para 1.2.1"
+// [hotfix-1.2.1 41e61bb] Alterando o número da versão 1.2.1
+// 1 arquivos alterados, 1 inserções (+), 1 exclusões (-)
 ```
 
-Não se esqueça de mudar o número de versão depois ramificar!
-
-Em seguida, corrigir o erro e se comprometer a correção em um ou mais submissões separadas. 
+Em seguida, se corrige o erro, fazendo os `commits` para a correção. 
 
 ```
 $ git commit -m "Corrigido o problema de produção grave"
-//[hotfix-1.2.1 abbe5d6] problema de produção fixo grave
-//5 arquivos mudou, 32 inserções (+), 17 exclusões (-)
+//[hotfix/1.2.1 abbe5d6] Corrigido o problema de produção grave
+//5 arquivos alterados, 32 inserções (+), 17 exclusões (-)
 ```
 
-### Finalizar um branch hotfix
+## Finalizando uma branch
 
-Quando terminar, o `hotfix` precisa ser mesclado de volta para `master`, mas também precisa ser mesclado em `dev` a fim de salvar que o `hotfix` que está incluído na próxima versão. Isto é completamente semelhante à forma como branches `releases` são finalizados.
+Quando terminar, a branch `hotfix` precisa ser mesclada de volta para `master`, mas também precisa ser mesclada em `dev`, a fim de salvar o que está na branch `hotfix`, na próxima versão. É semelhante com a finalização de uma branch `release`.
 
-Primeiro, atualizar `master` e marcar o lançamento. 
+Primeiro, atualizar a branch `master` e marcar o lançamento. 
 
 ```
 $ git checkout master
-// Para ramificar 'master'
-$ git merge --no-ff hotfix-1.2.1
-// Fusão tomada pelos recursiva.
-// (Resumo das alterações)
+// Entra na branch 'master'
+$ git merge --no-ff hotfix/1.2.1
+// Faz a junção do hotfix com master
 $ git tag -a 1.2.1
+// cria a tag da versão
 ```
-
-Você pode muito bem querer usar as `flags` -s ou -u <key> para assinar seu tag cryptografica.
 
 Em seguida, incluir a correção de bugs em `dev` também: 
 
 ```
-$ git checkout develop
-// Para ramo "dev"
-$ git merge --no-ff hotfix-1.2.1
-// Fusão tomada pelos recursiva.
-// (Resumo das alterações)
+$ git checkout dev
+// Entra na branch "dev"
+$ git merge --no-ff hotfix/1.2.1
+// Faz a junção do hotfix com dev
 ```
 
-A única exceção a regra, é quando um `branch` release existe atualmente, as mudanças de `hotfix` precisam ser mesclados no branch `release`, em vez de `dev`. A mesclagem da correção no branch `release` acabará por resultar na `hotfix` sendo mesclado em `dev` também, quando o branch `release` estiver finalizado. (Se o trabalho em `dev` imediatamente requer este `hotfix` e não pode esperar para o branch `release` para ser concluída, você pode, seguramente, mesclar o `hotfix` em `dev`.)
+A única exceção a regra, é quando uma branch `release` existe e as mudanças da branch `hotfix`, precisam ser mescladas na branch `release`, ao invés de `dev`. A mesclagem da correção na branch `release` acabará por resultar na branch `hotfix` ser mesclada em `dev` também, quando a branch `release` estiver finalizada. (Se o trabalho em `dev` requer imediatamente este `hotfix` e não pode esperar para a branch `release` para ser concluída, você pode, seguramente, mesclar a branch `hotfix` em `dev`.)
 
-Por fim, remova o branch temporário: 
+Por fim, remova a branch temporário: 
 
 ```
-$ git branch -d hotfix-1.2.1
-// Excluído o branch hotfix-1.2.1.
+$ git branch -d hotfix/1.2.1
+// Excluída a branch hotfix/1.2.1.
 ```
 
+[&#65513; Auxiliares](https://github.com/doc-solutions/documentation-gitflow/blob/master/source/branches/supporting.md)
 [&#65513; Readme](https://github.com/doc-solutions/documentation-gitflow/blob/master/README.md)
