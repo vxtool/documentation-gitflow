@@ -31,7 +31,7 @@ Sugestão de nomeação para as branches auxiliares:
 
 - `release/[versão]`
 - `feature/[data(formato americano)]_[nome da feature]`
-- `hotfix/[data(formato americano)]_[nome do hotfix]`
+- `hotfix/[versão]`
 
 Assim, garante mais distinção entre as branches do mesmo segmento.
 
