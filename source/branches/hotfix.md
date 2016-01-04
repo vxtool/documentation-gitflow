@@ -68,4 +68,4 @@ $ git branch -d hotfix-1.2.1
 // Excluído o branch hotfix-1.2.1.
 ```
 
-[&#65513; Voltar](https://github.com/doc-solutions/documentation-gitflow/blob/master/README.md)
+[&#65513; Readme](https://github.com/doc-solutions/documentation-gitflow/blob/master/README.md)

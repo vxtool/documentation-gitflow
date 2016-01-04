@@ -2,7 +2,7 @@
 
 - Criação a partir de: `dev`
 - Deve ser mesclada em: `dev`
-- Nomenclatura: `feature-*`
+- Nomenclatura: `feature/*`
 
 As branches `features` são usadas ​​para desenvolver novas funcionalidades para o próximo ou um lançamento em futuro distante. Ao iniciar o desenvolvimento de um recurso, a versão alvo em que esse recurso será incorporado, pode muito bem ser desconhecida nesse ponto. A essência de um branch de recurso é que ele existe enquanto o recurso está em desenvolvimento, mas acabará por ser mescladas de volta em dev (definitivamente adicionar o novo recurso para o lançamento) ou descartados (no caso de uma experiência decepcionante).
 
@@ -34,4 +34,4 @@ Neste último caso, é impossível ver a história Git qual dos objetos cometem 
 
 Sim, ele vai criar um vazio no commit de objetos, mas o ganho é muito maior do que o custo. 
 
-[&#65513; Voltar](https://github.com/doc-solutions/documentation-gitflow/blob/master/README.md)
+[&#65513; Readme](https://github.com/doc-solutions/documentation-gitflow/blob/master/README.md)
