@@ -4,33 +4,33 @@
 - Deve ser mesclada em: `dev`
 - Nomenclatura: `feature/*`
 
-As branches `features` são usadas ​​para desenvolver novas funcionalidades para o próximo ou um lançamento em futuro distante. Ao iniciar o desenvolvimento de um recurso, a versão alvo em que esse recurso será incorporado, pode muito bem ser desconhecida nesse ponto. A essência de um branch de recurso é que ele existe enquanto o recurso está em desenvolvimento, mas acabará por ser mescladas de volta em dev (definitivamente adicionar o novo recurso para o lançamento) ou descartados (no caso de uma experiência decepcionante).
+A branch `feature` é utilizada para desenvolver novas funcionalidades para o projeto. Dependendo do tempo de vida dessa branch, ela precisará ser atualizada e não ficar muito distante da sua branch de origem. Digamos que fique trabalhando por 2 semanas nessa branch, dependendo do ritmo da equipe e das tarefas, esse tempo pode provocar uma distinção muito grande e acarretar muitos conflitos quando devolver essa branch para `dev`. Nesse caso, será necessário que faça um `rebase`, nessa branch `feature`, antes de enviar o _Pull Request_ .
 
-Os branches `features` normalmente existem em repositórios do desenvolvedor apenas, não em origin.
+Normalmente uma branch `feature` existe apenas no repositório do desenvolvedor, não em origin. Mas como acredito que não podemos dar vez para o azar, é melhor essa descisão ficar por conta do alinhamento da equipe.
 
-## Criando um branch feature
+## Criando uma branch
 
-Quando começar a trabalhar em um novo recurso, se ramificam a partir do branch dev. 
+Para começar em um novo recurso, deverá ser criado uma nova branch a partir de `dev`. 
 
 ```
-$ git checkout -b myfeature dev
+$ git checkout -b feature/20160104_resource-name dev
 ```
 
-## Incorporando uma característica finalizada em dev
+## Finalizando uma branch
 
-Recursos finalizados podem ser mesclados no branch dev definitivamente, para serem adicionados a próxima versão: 
+A branch atingiu o seu objetivo e o recurso nela desenvolvido, já está pronto para ser mesclado com a branch de `dev`. 
 ```
 $ git checkout dev
-$ git merge --no-ff MyFeature
-$ git branch -d MyFeature
+$ git merge --no-ff feature/20160104_resource-name
+$ git branch -d feature/20160104_resource-name
 $ git push origin dev
 ```
 
-A flag `--no-ff` faz com que a impressão em série para criar sempre um novo objeto commit, mesmo que a fusão poderia ser realizada com um `fast-forward`. Isso evita a perda de informações sobre a existência histórica de um ramo de funcionalidade e reúne todos os commits que juntos adicionaram o recurso. Exemplo:
+A flag `--no-ff` faz a impressão em série para criar sempre um novo objeto commit, mesmo se a fusão poderia ser realizada com um `fast-forward`. Isso evita a perda de informações sobre a existência histórica de uma branch `feature` e reune todos os commits que juntos adicionaram o recurso. Exemplo:
 
 ![Flag --no-ff](https://github.com/doc-solutions/documentation-gitflow/blob/master/source/images/merge-no-ff.jpg)
 
-Neste último caso, é impossível ver a história Git qual dos objetos cometem juntos têm implementado um recurso de que você teria que ler manualmente todas as mensagens de log. Reverter uma característica totalmente (ou seja, um grupo de commit), é uma verdadeira dor de cabeça na última situação, enquanto ele é feito facilmente se o `--no-ff` foi usado.
+Sem a `flag` é impossível ver a história dos objetos, já que teria que ler manualmente todas as mensagens de log para identificar os `commits`. Reverter uma `feature` totalmente, é uma dor de cabeça na última situação, enquanto ele é feito facilmente se o `--no-ff` foi usado.
 
 Sim, ele vai criar um vazio no commit de objetos, mas o ganho é muito maior do que o custo. 
 
