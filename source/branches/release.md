@@ -2,69 +2,65 @@
 
 - Criação a partir de: `dev` 
 - Deve ser mesclada em: `dev` e `master` 
-- Nomenclatura: `release-*`
+- Nomenclatura: `release/*`
 
-O branch `release` apoia a preparação de uma nova versão de produção. Eles permitem pequenas correções de bugs e preparar os meta-dados para um `release` (número da versão, construção de datas, etc.). Ao fazer todo esse trabalho em um branch `release`, o branch `dev` é liberado para receber recursos para o próximo grande lançamento.
+A branch `release` apoia a preparação de uma nova versão de produção. Ela permite pequenas correções de bugs e a preparação para um `release`(número de versão). Os novos recursos estando em uma branch `release`, a branch `dev` é liberada para receber novos recursos para o próximo grande lançamento.
 
-O momento chave para ramificar um novo branch `release` de `dev` é quando o ambiente (quase) reflete o estado desejado da nova versão. Pelo menos todos os recursos que são direcionados para a contrução do `release` deve ser mesclado para `dev` neste momento. Todos os recursos destinados aos futuros lançamentos não poderãoesperar até depois do branch `release` é ramificado.
+O momento chave para criar uma nova branch `release` de `dev` é quando o ambiente (quase) reflete o estado desejado da nova versão. Todos os recursos que são direcionados para a contrução do `release` devem ser mesclados para `dev` neste momento. Todos os recursos destinados a futuros lançamentos terão que esperar a criação da branch `release`.
 
-É exatamente no início de um branch `release` que o lançamento é atribuído um número de versão. Até aquele momento, o branch `dev` refletiu mudanças para a "próxima versão", mas não está claro se essa "próxima versão" acabará por se tornar 0.3 ou 1.0, até o branch release é iniciado. Essa decisão é feita sobre o início do branch `release` e é realizado pelas regras do projeto no número da versão.
+É exatamente no início de uma branch `release` que é atribuído um número de versão para o lançamento. Até aquele momento, a branch `dev` refletiu mudanças para a "próxima versão", mas não está claro se essa "próxima versão" será 0.3 ou 1.0, até a branch `release` ser criada. Essa decisão do número da versão é feita sobre a criação da branch `release` e é realizado pelas regras do projeto.
 
+## Criando uma branch
 
-## Criando um branch release
-
-Os branches `release` são criados a partir do branch `dev`. Por exemplo, digamos que a versão 1.1.5 é a versão de produção atual e nós temos um grande lançamento chegando. O estado de `dev` está pronto para a "próxima versão" e decidimos que isso vai se tornar a versão 1.2 (em vez de 1.1.6 ou 2.0). Portanto, se ramificar e dar o branch `release` um nome que reflete o novo número de versão:
+A branch `release` é criada a partir da branch `dev`. Digamos que a versão 1.1.5 é a versão atual de produção e nós temos um grande lançamento chegando. O estado de `dev` está pronto para a "próxima versão" e decidimos que isso vai se tornar a versão 1.2 (em vez de 1.1.6 ou 2.0). Portanto, será criada e dada a branch `release` um nome que reflete o novo número de versão:
 
 ```
-$ git checkout -b release-1.2 dev
-// Mudou para um novo branch "release-1.2"
+$ git checkout -b release/1.2 dev
+// Criou a nova branch "release-1.2"
 $ 1.2 ./bump-version.sh
-// Arquivos modificados com sucesso, versão adiado para 1,2.
-$ git commit -a -m "Mudando o número de versão para 1.2"
-// [release-1.2 74d9424] Mudando o número de versão para 1.2
-// 1 arquivos alterados, 1 inserções (+), 1 deleções (-)
+// Arquivos modificados com sucesso, versão alterada para 1.2.
+$ git commit -am "Alterando o número de versão para 1.2"
+// [release-1.2 74d9424] Alterando o número de versão para 1.2
+// 1 arquivos alterados, 1 inserções (+), 1 exclusões (-)
 ```
 
-Depois de criar um novo branch e mudar para ele, nós mudamos o número da versão. Aqui, bump-version.sh é um script shell fictício que muda alguns arquivos na cópia de trabalho para refletir a nova versão. (Isto pode ser, obviamente, uma mudança manual.) Em seguida, o número da versão alterada está comprometida.
+Depois de criar uma nova branch e mudar para ela, nós mudamos o número da versão. No exemplo, bump-version.sh é um script shell fictício que muda alguns arquivos para refletir a nova versão. (Isto pode ser, obviamente, uma mudança manual.) Em seguida, criamos um `commit` com essa alteração.
 
-Este novo branch pode existir lá por um tempo, até que o `release` possa ser implementado definitivamente. Durante esse tempo, correções de bugs pode ser aplicada neste branch (em vez de ser no branch `dev`). Adicionando grandes novos recursos aqui é estritamente proibido. Eles devem ser mesclados em dev, e portanto, esperar pelo próximo grande lançamento.
+A nova branch pode existir por um tempo, até que o `release` possa ser implementado definitivamente. Durante esse tempo, correções de bugs podem ser aplicadas nesta branch (em vez de ser na branch `dev`). É estritamente proibido adicionar grandes novos recursos aqui. Eles devem ser mesclados em `dev`, e portanto, esperar pelo próximo grande lançamento.
 
-## Finalizar um branch release
+## Finalizando uma branch
 
-Quando o estado do branch `release` está pronto para se tornar um lançamento real, algumas ações precisam ser realizadas. Primeiro, o branch `release` é mesclado em `master` (uma vez que cada commit no `master` é um novo lançamento, por definição). Em seguida, que os commits no `master` devem ser marcados para futura referência fácil para essa versão histórica. Finalmente, as alterações feitas no branch `release` precisam ser mescladas de volta para `dev` de modo que as versões futuras também contêm estas correções de bugs.
+Quando a branch `release` estiver pronta para se tornar um lançamento real, algumas ações precisam ser realizadas. Primeiro, a branch `release` é mesclada em `master` (uma vez que cada commit no `master` é um novo lançamento, por definição). Em seguida, os commits no `master` devem ser marcados para futura referência fácil para essa versão histórica. Finalmente, as alterações feitas na branch `release` precisam ser mescladas em `dev`, de modo que as versões futuras também contenham estas correções de bugs.
 
 Os dois primeiros passos no git: 
 
 ```
 $ git checkout master
-// Para ramificar 'master'
-$ git merge --no-ff release-1.2
-// Fusão tomada pelos recursiva.
-// (Resumo das alterações)
+// Entra para a branch 'master'
+$ git merge --no-ff release/1.2
+// Faz a junção do release com master.
 $ git tag -a 1.2
+// cria a tag da versão
 ```
 
-O lançamento é feito agora, e marcou para referência futura.
-
-Você pode muito bem querer usar as bandeiras -s ou -u <key>  para assinar seu tag cryptografica. 
- 
-Para manter as alterações feitas no branch release, precisamos mesclar aqueles volta para `dev`. 
+O lançamento é feito e marcado para referência futura. 
+Para manter as alterações feitas na branch `release`, precisamos mesclar em `dev`. 
 
 ```
 $ git checkout dev
-// Para o branch "dev"
+// Entra na branch "dev"
 $ git merge --no-ff release-1.2
-// Fusão tomada pelo recursivo.
-// (Resumo das alterações)
+// Faz a junção do release com dev
 ```
 
-Este passo pode muito bem levar a um conflito de mesclagem (provavelmente até mesmo, uma vez que nós mudamos o número da versão). Se assim for, corrigí-lo e fazer o commit.
+Este passo pode muito bem levar a um conflito de mesclagem (provavelmente até mesmo, uma vez que nós mudamos o número da versão). Sendo assim, é só corrigir e fazer o commit.
 
-Agora estamos realmente feito e o branch `release` pode ser finalizado, uma vez que não é mais necessário: 
+Agora sim, a branch `release` pode ser finalizada, uma vez que não é mais necessária: 
 
 ```
-$ git branch -d release-1.2
-// Release-1.2 branch finalizado
+$ git branch -d release/1.2
+// Release/1.2 branch finalizado
 ```
 
+[&#65513; Auxiliares](https://github.com/doc-solutions/documentation-gitflow/blob/master/source/branches/supporting.md)
 [&#65513; Readme](https://github.com/doc-solutions/documentation-gitflow/blob/master/README.md)
