@@ -10,4 +10,5 @@
     	* [Feature](source/branches/feature.md)
     	* [Release](source/branches/release.md)
 	    * [Hotfix](source/branches/hotfix.md)
-* [Sugestão de nomeação](NAMING-SUGGESTION.md)
+* [Sugestão de nomeação](source/NAMING-SUGGESTION.md)
+* [Referências](source/REFERENCES.md)
