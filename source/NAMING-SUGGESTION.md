@@ -28,6 +28,6 @@ Querendo ir ao máximo da organização, podemos estar inserindo `flags`, para i
 
 Uma boa prática para a padronização das mensagens dos `commits`, dos títulos e descrições das `issues`, é os mesmos serem escritos em inglês.
 
-![Exemplo visual de nomeação(branches, commits e issues)](https://github.com/doc-solutions/documentation-gitflow/blob/master/source/images/branches.jpg)
+![Exemplo visual de nomeação(branches, commits e issues)](images/branches.jpg)
 
 Cada equipe tem que alinhar os processos para identificação e associação. E para isso é muito importante a nomeação de branches, commits e issues. Fica a sugestão e tendo ideias para contribuir, não perca tempo. :) 
