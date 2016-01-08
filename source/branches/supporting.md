@@ -4,12 +4,10 @@ As branches auxiliares nos apoiam no desenvolvimento entre os membros da equipe,
 
 Os tipos de auxiliares são:
 
-- [feature](https://github.com/doc-solutions/documentation-gitflow/blob/master/source/feature.md)
-- [release](https://github.com/doc-solutions/documentation-gitflow/blob/master/source/release.md)
-- [hotfix](https://github.com/doc-solutions/documentation-gitflow/blob/master/source/hotfix.md)
+- [feature](feature.md)
+- [release](release.md)
+- [hotfix](hotfix.md)
 
 Cada um tem um propósito específico e estão vinculados a regras quanto a sua origem e destino de mesclagem.
 
 Podem existir apenas localmente ou também remoto, dependendo da necessidade da equipe. 
-
-[&#65513; Readme](https://github.com/doc-solutions/documentation-gitflow/blob/master/README.md)

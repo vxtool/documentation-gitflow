@@ -11,5 +11,3 @@ A branch `origin/dev`, será idêntico a branch `origin/master`, com alteraçõe
 Quando a branch `dev` estiver estável e pronta, será criado a branch `release`, onde o mesmo terá uma nova versão para produção. Nessa etapa, que normalmente ocorre a etapa de homologação das alterações. Estando tudo certo, com as novas funcionalidades, o mesmo deverá ser mesclado na branch `master`.
 
 - [dev](dev.md)
-
-[&#65513; Readme](https://github.com/doc-solutions/documentation-gitflow/blob/master/README.md)

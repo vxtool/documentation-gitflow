@@ -62,7 +62,3 @@ Por fim, remova a branch temporário:
 $ git branch -d hotfix/1.2.1
 // Excluída a branch hotfix/1.2.1.
 ```
-
-[&#65513; Auxiliares](https://github.com/doc-solutions/documentation-gitflow/blob/master/source/branches/supporting.md)
-
-[&#65513; Readme](https://github.com/doc-solutions/documentation-gitflow/blob/master/README.md)

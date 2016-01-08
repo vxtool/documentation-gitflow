@@ -61,7 +61,3 @@ Agora sim, a branch `release` pode ser finalizada, uma vez que não é mais nece
 $ git branch -d release/1.2
 // Release/1.2 branch finalizado
 ```
-
-[&#65513; Auxiliares](https://github.com/doc-solutions/documentation-gitflow/blob/master/source/branches/supporting.md)
-
-[&#65513; Readme](https://github.com/doc-solutions/documentation-gitflow/blob/master/README.md)
