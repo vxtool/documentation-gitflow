@@ -1,7 +1,7 @@
 # Documentação do Fluxo de Trabalho com o GIT
 
-[![licence mit](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/doc-solutions/documentation-gitflow/blob/master/LICENSE.md)
-[![issues](https://img.shields.io/github/issues/doc-solutions/documentation-gitflow.svg)](https://github.com/doc-solutions/documentation-gitflow/issues)
+[![licence mit](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](http://hemersonvianna.mit-license.org/)
+[![issues](https://img.shields.io/github/issues/doc-solutions/documentation-gitflow.svg?style=flat-square)](https://github.com/doc-solutions/documentation-gitflow/issues)
 
 ## Introdução
 
