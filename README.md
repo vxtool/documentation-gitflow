@@ -1,7 +1,11 @@
 # Documentação do Fluxo de Trabalho com o GIT
 
 [![licence mit](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](http://hemersonvianna.mit-license.org/)
-[![issues](https://img.shields.io/github/issues/descco-tools/documentation-gitflow.svg?style=flat-square)](https://github.com/descco-tools/documentation-gitflow/issues)
+[![GitHub issues](https://img.shields.io/github/issues/org-victorinox/documentation-gitflow.svg)](https://github.com/org-victorinox/documentation-gitflow/issues)
+![GitHub Release Date](https://img.shields.io/github/release-date/org-victorinox/documentation-gitflow.svg)
+![GitHub top language](https://img.shields.io/github/languages/top/org-victorinox/documentation-gitflow.svg)
+![GitHub repo size](https://img.shields.io/github/repo-size/org-victorinox/documentation-gitflow.svg)
+![GitHub All Releases](https://img.shields.io/github/downloads/org-victorinox/documentation-gitflow/total.svg)
 
 ## Introdução
 
@@ -18,7 +22,7 @@
 
 ## Log
 
-Check [Releases](https://github.com/descco-tools/documentation-gitflow/releases) for detailed changelog.
+Check [Releases](https://github.com/org-victorinox/documentation-gitflow/releases) for detailed changelog.
 
 ## License
 
